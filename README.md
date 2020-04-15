@@ -10,7 +10,7 @@ pip install httpz
 
 Get an HTTP status code
 
-```py3
+```pycon
 >>> HTTPStatusCodes.get("200")
 HTTPStatusCode(code=200, message=OK, description=The request has succeeded)
 ```
@@ -29,7 +29,7 @@ HTTPStatusCode(code=200, message=OK, description=The request has succeeded)
 
 For example:
 
-```py3
+```pycon
 >>> code = HTTPStatusCodes.get("100")
 >>> code.code
 100
@@ -44,7 +44,7 @@ nished'
 
 Calling `to_dict()` on an `HTTPStatusCode` object will return a dict:
 
-```py3
+```pycon
 >>> code = HTTPStatusCodes.get("200")
 >>> code.to_dict()
 {'description': 'The request has succeeded', 'code': 200, 'message': 'OK', 'webdav': False, 'category': 'successful'}
@@ -52,7 +52,7 @@ Calling `to_dict()` on an `HTTPStatusCode` object will return a dict:
 
 Get a list of `HTTPStatusCode` objects by category
 
-```py3
+```pycon
 >>> HTTPStatusCodes.get_category("informational")
 [HTTPStatusCode(code=100, message=Continue, description=This interim response indicates that everything so far is OK and that the client should continue the reque
 st, or ignore the response if the request is already finished), HTTPStatusCode(code=101, message=Switching Protocol, description=This code is sent in response to
@@ -72,7 +72,7 @@ Categories:
 
 An enum of categories is also available:
 
-```py3
+```pycon
 >>> from httpz import HTTPStatusCodeCategory
 >>> HTTPStatusCodeCategory.CLIENT_ERROR
 <HTTPStatusCodeCategory.CLIENT_ERROR: 'client_error'>
@@ -82,7 +82,7 @@ An enum of categories is also available:
 
 An ordered list of all `HTTPStatusCode` objects (from low to high) can be obtained with:
 
-```py3
+```pycon
 >>> from httpz import HTTPStatusCodes
 >>> all_codes = HTTPStatusCodes.get_all()
 >>> for status_code in all_codes:
