@@ -1,5 +1,7 @@
 ## httpz - A handy HTTP status code library
 
+![Python package](https://github.com/Julian-Nash/httpz/workflows/Python%20package/badge.svg)
+
 #### Installation
 
 ```shell script
