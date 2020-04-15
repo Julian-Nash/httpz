@@ -64,11 +64,13 @@ e)]
 
 Categories:
 
-- `informational` - 100 range
-- `successful` - 200 range
-- `redirection` - 300 range
-- `client_error` - 400 range
-- `server_error` - 500 range
+| Category | Range |
+| -------- | ----- |
+| `informational` | `100` - `199` |
+| `successful` | `200` - `299` |
+| `redirection` | `300` - `399` |
+| `client_error` | `400` - `499` |
+| `server_error` | `500` - `599` |
 
 An enum of categories is also available:
 
@@ -80,7 +82,7 @@ An enum of categories is also available:
 'client_error'
 ```
 
-An ordered list of all `HTTPStatusCode` objects (from low to high) can be obtained with:
+An ordered list of all `HTTPStatusCode` objects (from low to high) can be obtained by calling the following method:
 
 ```pycon
 >>> from httpz import HTTPStatusCodes
